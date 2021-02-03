@@ -9,12 +9,12 @@ TAB: .4byte 1, 12, 28, 4, 3
 
 main:
 /* ---------
-   ---------*/
-   /* Récupérer l'adresse de TAB dans R1 */
+   ---------
+   Récupérer l'adresse de TAB dans R1 */
    ldr r0, =TAB
    ldr r5, =RES
    /* Initialiser les registres à 0 pour faire la somme
-    r1 contient l'indice courant, et r4 le cumul de la somme */
+   r1 contient l'indice courant, et r4 le cumul de la somme */
    mov r1, #0
    mov r4, #0
    /* Effectuer la somme */
@@ -30,7 +30,7 @@ loop:
    b loop
    /* Mettre le résultat de la somme dans la variable RES */
 end:
-   STR R4, [R5]
+   str R4, [R5]
 
 stop: 	B stop
 		BX LR
