@@ -10,7 +10,7 @@ main:
    ---------
    Récupérer l'adresse de TAB dans R1 */
    ldr r0, =TAB
-   /* Initialiser r1 à 0, l'indice courant */
+   /* Initialiser r1 à 1: la valeur courante, et r2 à 0: l'indice courant */
    mov r1, #1
    mov r2, #0
    /* Remplir le tableau */
