@@ -1,4 +1,4 @@
-"Src/TP2_ex1.o"
+"Src/TP2_ex2_1_student.o"
 "Src/syscalls.o"
 "Src/sysmem.o"
 "Startup/startup_stm32f446retx.o"

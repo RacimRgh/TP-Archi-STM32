@@ -22,3 +22,215 @@ Finished building: TP2.bin
 Finished building: TP2.list
  
  
+19:16:08 **** Clean-only build of configuration Debug for project TP2 ****
+make -j16 clean 
+rm -rf *
+ 
+19:16:08 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/TP2_ex2_1_student.c: In function 'main':
+../Src/TP2_ex2_1_student.c:14:6: warning: unused variable 'res' [-Wunused-variable]
+  int res = fibo(0,1);
+      ^~~
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-size   TP2.elf 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+   text	   data	    bss	    dec	    hex	filename
+    800	      8	   1608	   2416	    970	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.list
+Finished building: TP2.bin
+ 
+ 
+19:16:17 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    800	      8	   1608	   2416	    970	TP2.elf
+Finished building: default.size.stdout
+ 
+19:24:30 **** Clean-only build of configuration Debug for project TP2 ****
+make -j16 clean 
+rm -rf *
+ 
+19:24:30 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/TP2_ex2_1_student.c: In function 'main':
+../Src/TP2_ex2_1_student.c:14:6: warning: unused variable 'res' [-Wunused-variable]
+  int res = fibo(0,1);
+      ^~~
+C:\Users\racim\AppData\Local\Temp\ccXZmhUf.s: Assembler messages:
+C:\Users\racim\AppData\Local\Temp\ccXZmhUf.s:169: Error: undefined symbol x used as an immediate value
+make: *** [Src/subdir.mk:24: Src/TP2_ex2_1_student.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:24:41 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+../Src/TP2_ex2_1_student.c: In function 'main':
+../Src/TP2_ex2_1_student.c:14:6: warning: unused variable 'res' [-Wunused-variable]
+  int res = fibo(0,1);
+      ^~~
+C:\Users\racim\AppData\Local\Temp\ccfEuAUy.s: Assembler messages:
+C:\Users\racim\AppData\Local\Temp\ccfEuAUy.s:169: Error: bad expression -- `mov r0,=x'
+make: *** [Src/subdir.mk:24: Src/TP2_ex2_1_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:25:10 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+../Src/TP2_ex2_1_student.c: In function 'main':
+../Src/TP2_ex2_1_student.c:14:6: warning: unused variable 'res' [-Wunused-variable]
+  int res = fibo(0,1);
+      ^~~
+C:\Users\racim\AppData\Local\Temp\cc0pUWtb.s: Assembler messages:
+C:\Users\racim\AppData\Local\Temp\cc0pUWtb.s:169: Error: constant expression expected -- `add r0,x,#1'
+make: *** [Src/subdir.mk:24: Src/TP2_ex2_1_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:25:22 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+../Src/TP2_ex2_1_student.c: In function 'main':
+../Src/TP2_ex2_1_student.c:14:6: warning: unused variable 'res' [-Wunused-variable]
+  int res = fibo(0,1);
+      ^~~
+C:\Users\racim\AppData\Local\Temp\ccCNKmcr.s: Assembler messages:
+C:\Users\racim\AppData\Local\Temp\ccCNKmcr.s:169: Error: constant expression expected -- `add r0,x,1'
+make: *** [Src/subdir.mk:24: Src/TP2_ex2_1_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:25:53 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+../Src/TP2_ex2_1_student.c: In function 'main':
+../Src/TP2_ex2_1_student.c:14:6: warning: unused variable 'res' [-Wunused-variable]
+  int res = fibo(0,1);
+      ^~~
+../Src/TP2_ex2_1_student.c: In function 'fibo_asm':
+../Src/TP2_ex2_1_student.c:42:6: error: expected '(' before '{' token
+      {
+      ^
+../Src/TP2_ex2_1_student.c:43:10: error: unknown type name 'ADD'
+          ADD r0, x, 1
+          ^~~
+../Src/TP2_ex2_1_student.c:43:21: error: expected identifier or '(' before numeric constant
+          ADD r0, x, 1
+                     ^
+../Src/TP2_ex2_1_student.c:43:18: warning: unused variable 'x' [-Wunused-variable]
+          ADD r0, x, 1
+                  ^
+../Src/TP2_ex2_1_student.c:43:14: warning: unused variable 'r0' [-Wunused-variable]
+          ADD r0, x, 1
+              ^~
+../Src/TP2_ex2_1_student.c:46:1: error: expected declaration or statement at end of input
+ }
+ ^
+../Src/TP2_ex2_1_student.c:40:6: warning: unused variable 'r0' [-Wunused-variable]
+  int r0;
+      ^~
+make: *** [Src/subdir.mk:24: Src/TP2_ex2_1_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:26:23 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+../Src/TP2_ex2_1_student.c: In function 'main':
+../Src/TP2_ex2_1_student.c:14:6: warning: unused variable 'res' [-Wunused-variable]
+  int res = fibo(0,1);
+      ^~~
+C:\Users\racim\AppData\Local\Temp\ccNacH8x.s: Assembler messages:
+C:\Users\racim\AppData\Local\Temp\ccNacH8x.s:169: Error: undefined symbol x used as an immediate value
+make: *** [Src/subdir.mk:24: Src/TP2_ex2_1_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:26:36 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+../Src/TP2_ex2_1_student.c: In function 'main':
+../Src/TP2_ex2_1_student.c:14:6: warning: unused variable 'res' [-Wunused-variable]
+  int res = fibo(0,1);
+      ^~~
+../Src/TP2_ex2_1_student.c: In function 'fibo_asm':
+../Src/TP2_ex2_1_student.c:40:6: error: 'x' redeclared as different kind of symbol
+  int x;
+      ^
+../Src/TP2_ex2_1_student.c:38:19: note: previous definition of 'x' was here
+ void fibo_asm(int x, int y){
+                   ^
+../Src/TP2_ex2_1_student.c:40:6: warning: unused variable 'x' [-Wunused-variable]
+  int x;
+      ^
+make: *** [Src/subdir.mk:24: Src/TP2_ex2_1_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:26:44 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+../Src/TP2_ex2_1_student.c: In function 'main':
+../Src/TP2_ex2_1_student.c:14:6: warning: unused variable 'res' [-Wunused-variable]
+  int res = fibo(0,1);
+      ^~~
+C:\Users\racim\AppData\Local\Temp\ccs3BeAI.s: Assembler messages:
+C:\Users\racim\AppData\Local\Temp\ccs3BeAI.s:169: Error: undefined symbol x used as an immediate value
+make: *** [Src/subdir.mk:24: Src/TP2_ex2_1_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:26:59 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+../Src/TP2_ex2_1_student.c: In function 'main':
+../Src/TP2_ex2_1_student.c:14:6: warning: unused variable 'res' [-Wunused-variable]
+  int res = fibo(0,1);
+      ^~~
+C:\Users\racim\AppData\Local\Temp\cch8zUnO.s: Assembler messages:
+C:\Users\racim\AppData\Local\Temp\cch8zUnO.s:173: Error: undefined symbol x used as an immediate value
+make: *** [Src/subdir.mk:24: Src/TP2_ex2_1_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:28:40 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+../Src/TP2_ex2_1_student.c: In function 'main':
+../Src/TP2_ex2_1_student.c:14:6: warning: unused variable 'res' [-Wunused-variable]
+  int res = fibo(0,1);
+      ^~~
+../Src/TP2_ex2_1_student.c: In function 'fibo_asm':
+../Src/TP2_ex2_1_student.c:45:2: error: undefined named operand 'input_i'
+  );
+  ^
+../Src/TP2_ex2_1_student.c:45:2: error: undefined named operand 'input_j'
+make: *** [Src/subdir.mk:24: Src/TP2_ex2_1_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:28:46 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+../Src/TP2_ex2_1_student.c: In function 'main':
+../Src/TP2_ex2_1_student.c:14:6: warning: unused variable 'res' [-Wunused-variable]
+  int res = fibo(0,1);
+      ^~~
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-size   TP2.elf 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+   text	   data	    bss	    dec	    hex	filename
+    844	      8	   1608	   2460	    99c	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.list
+Finished building: TP2.bin
+ 
+ 
+19:28:54 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    844	      8	   1608	   2460	    99c	TP2.elf
+Finished building: default.size.stdout
+ 
