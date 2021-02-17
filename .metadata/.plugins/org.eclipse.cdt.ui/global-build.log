@@ -551,3 +551,671 @@ Finished building: TP2.list
 Finished building: TP2.bin
  
  
+17:13:17 **** Clean-only build of configuration Debug for project TP2 ****
+make -j16 clean 
+rm -rf *
+ 
+17:13:17 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Src/TP2_ex3_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex3_student.d" -MT"Src/TP2_ex3_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex3_student.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/TP2_ex3_student.c: In function 'main':
+../Src/TP2_ex3_student.c:14:2: error: 'nb_e_c' undeclared (first use in this function)
+  nb_e_c = count_e(string1);
+  ^~~~~~
+../Src/TP2_ex3_student.c:14:2: note: each undeclared identifier is reported only once for each function it appears in
+../Src/TP2_ex3_student.c:17:6: warning: unused variable 'success' [-Wunused-variable]
+  int success = count_e_asm(string1);
+      ^~~~~~~
+../Src/TP2_ex3_student.c: In function 'count_e':
+../Src/TP2_ex3_student.c:35:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [Src/subdir.mk:24: Src/TP2_ex3_student.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+17:15:09 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex3_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex3_student.d" -MT"Src/TP2_ex3_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex3_student.o"
+../Src/TP2_ex3_student.c: In function 'main':
+../Src/TP2_ex3_student.c:18:6: warning: unused variable 'success' [-Wunused-variable]
+  int success = count_e_asm(string1);
+      ^~~~~~~
+../Src/TP2_ex3_student.c:14:6: warning: variable 'nb_e_c' set but not used [-Wunused-but-set-variable]
+  int nb_e_c;
+      ^~~~~~
+../Src/TP2_ex3_student.c: In function 'count_e':
+../Src/TP2_ex3_student.c:36:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+C:\Users\racim\AppData\Local\Temp\cc7DIYmX.s: Assembler messages:
+C:\Users\racim\AppData\Local\Temp\cc7DIYmX.s:164: Error: unknown pseudo-op: `...'
+make: *** [Src/subdir.mk:24: Src/TP2_ex3_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+17:15:33 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex3_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex3_student.d" -MT"Src/TP2_ex3_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex3_student.o"
+../Src/TP2_ex3_student.c:10:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'int'
+ int nb_e_c;
+ ^~~
+../Src/TP2_ex3_student.c: In function 'main':
+../Src/TP2_ex3_student.c:15:2: error: 'nb_e_c' undeclared (first use in this function)
+  nb_e_c = count_e(string1);
+  ^~~~~~
+../Src/TP2_ex3_student.c:15:2: note: each undeclared identifier is reported only once for each function it appears in
+../Src/TP2_ex3_student.c:18:6: warning: unused variable 'success' [-Wunused-variable]
+  int success = count_e_asm(string1);
+      ^~~~~~~
+../Src/TP2_ex3_student.c: In function 'count_e':
+../Src/TP2_ex3_student.c:36:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [Src/subdir.mk:24: Src/TP2_ex3_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+17:15:42 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex3_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex3_student.d" -MT"Src/TP2_ex3_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex3_student.o"
+../Src/TP2_ex3_student.c: In function 'main':
+../Src/TP2_ex3_student.c:18:6: warning: unused variable 'success' [-Wunused-variable]
+  int success = count_e_asm(string1);
+      ^~~~~~~
+../Src/TP2_ex3_student.c: In function 'count_e':
+../Src/TP2_ex3_student.c:36:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+C:\Users\racim\AppData\Local\Temp\ccoY7tck.s: Assembler messages:
+C:\Users\racim\AppData\Local\Temp\ccoY7tck.s:168: Error: unknown pseudo-op: `...'
+make: *** [Src/subdir.mk:24: Src/TP2_ex3_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+17:15:49 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex3_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex3_student.d" -MT"Src/TP2_ex3_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex3_student.o"
+../Src/TP2_ex3_student.c: In function 'main':
+../Src/TP2_ex3_student.c:18:6: warning: unused variable 'success' [-Wunused-variable]
+  int success = count_e_asm(string1);
+      ^~~~~~~
+../Src/TP2_ex3_student.c: In function 'count_e':
+../Src/TP2_ex3_student.c:36:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-size   TP2.elf 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+   text	   data	    bss	    dec	    hex	filename
+    844	     44	   1572	   2460	    99c	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.list
+Finished building: TP2.bin
+ 
+ 
+17:16:00 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    844	     44	   1572	   2460	    99c	TP2.elf
+Finished building: default.size.stdout
+ 
+17:16:26 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    844	     44	   1572	   2460	    99c	TP2.elf
+Finished building: default.size.stdout
+ 
+17:19:45 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    844	     44	   1572	   2460	    99c	TP2.elf
+Finished building: default.size.stdout
+ 
+17:21:44 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex3_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex3_student.d" -MT"Src/TP2_ex3_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex3_student.o"
+../Src/TP2_ex3_student.c: In function 'main':
+../Src/TP2_ex3_student.c:18:6: warning: unused variable 'success' [-Wunused-variable]
+  int success = count_e_asm(string1);
+      ^~~~~~~
+../Src/TP2_ex3_student.c: In function 'count_e':
+../Src/TP2_ex3_student.c:31:7: warning: variable 'ch' set but not used [-Wunused-but-set-variable]
+  char ch;
+       ^~
+../Src/TP2_ex3_student.c:38:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    852	     44	   1572	   2468	    9a4	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.list
+Finished building: TP2.bin
+ 
+ 
+17:21:57 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    852	     44	   1572	   2468	    9a4	TP2.elf
+Finished building: default.size.stdout
+ 
+17:27:39 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex3_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex3_student.d" -MT"Src/TP2_ex3_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex3_student.o"
+../Src/TP2_ex3_student.c: In function 'main':
+../Src/TP2_ex3_student.c:18:6: warning: unused variable 'success' [-Wunused-variable]
+  int success = count_e_asm(string1);
+      ^~~~~~~
+../Src/TP2_ex3_student.c: In function 'count_e':
+../Src/TP2_ex3_student.c:31:7: warning: variable 'ch' set but not used [-Wunused-but-set-variable]
+  char ch;
+       ^~
+../Src/TP2_ex3_student.c:39:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+C:\Users\racim\AppData\Local\Temp\ccjjumXV.s: Assembler messages:
+C:\Users\racim\AppData\Local\Temp\ccjjumXV.s:135: Error: undefined symbol cpt used as an immediate value
+make: *** [Src/subdir.mk:24: Src/TP2_ex3_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+17:28:58 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex3_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex3_student.d" -MT"Src/TP2_ex3_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex3_student.o"
+../Src/TP2_ex3_student.c: In function 'main':
+../Src/TP2_ex3_student.c:18:6: warning: unused variable 'success' [-Wunused-variable]
+  int success = count_e_asm(string1);
+      ^~~~~~~
+../Src/TP2_ex3_student.c: In function 'count_e':
+../Src/TP2_ex3_student.c:31:7: warning: variable 'ch' set but not used [-Wunused-but-set-variable]
+  char ch;
+       ^~
+../Src/TP2_ex3_student.c:41:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Src/TP2_ex3_student.o: In function `count_e':
+TP2_ex3_student.c:(.text.count_e+0x58): undefined reference to `cpt'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:57: TP2.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+17:29:20 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex3_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex3_student.d" -MT"Src/TP2_ex3_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex3_student.o"
+../Src/TP2_ex3_student.c: In function 'main':
+../Src/TP2_ex3_student.c:18:6: warning: unused variable 'success' [-Wunused-variable]
+  int success = count_e_asm(string1);
+      ^~~~~~~
+../Src/TP2_ex3_student.c: In function 'count_e':
+../Src/TP2_ex3_student.c:31:7: warning: variable 'ch' set but not used [-Wunused-but-set-variable]
+  char ch;
+       ^~
+../Src/TP2_ex3_student.c:41:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    864	     44	   1572	   2480	    9b0	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.list
+Finished building: TP2.bin
+ 
+ 
+17:29:27 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    864	     44	   1572	   2480	    9b0	TP2.elf
+Finished building: default.size.stdout
+ 
+17:31:12 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    864	     44	   1572	   2480	    9b0	TP2.elf
+Finished building: default.size.stdout
+ 
+17:32:18 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex3_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex3_student.d" -MT"Src/TP2_ex3_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex3_student.o"
+../Src/TP2_ex3_student.c: In function 'main':
+../Src/TP2_ex3_student.c:18:6: warning: unused variable 'success' [-Wunused-variable]
+  int success = count_e_asm(string1);
+      ^~~~~~~
+../Src/TP2_ex3_student.c: In function 'count_e':
+../Src/TP2_ex3_student.c:31:7: warning: variable 'ch' set but not used [-Wunused-but-set-variable]
+  char ch;
+       ^~
+../Src/TP2_ex3_student.c:41:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    860	     44	   1572	   2476	    9ac	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.list
+Finished building: TP2.bin
+ 
+ 
+17:32:35 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    860	     44	   1572	   2476	    9ac	TP2.elf
+Finished building: default.size.stdout
+ 
+17:32:40 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    860	     44	   1572	   2476	    9ac	TP2.elf
+Finished building: default.size.stdout
+ 
+17:33:15 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    860	     44	   1572	   2476	    9ac	TP2.elf
+Finished building: default.size.stdout
+ 
+17:33:53 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex3_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex3_student.d" -MT"Src/TP2_ex3_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex3_student.o"
+../Src/TP2_ex3_student.c: In function 'main':
+../Src/TP2_ex3_student.c:18:6: warning: unused variable 'success' [-Wunused-variable]
+  int success = count_e_asm(string1);
+      ^~~~~~~
+../Src/TP2_ex3_student.c: In function 'count_e':
+../Src/TP2_ex3_student.c:38:27: error: expected ';' before ':' token
+  asm("LDR r0,=nb_e_c\n\t"):
+                           ^
+../Src/TP2_ex3_student.c:31:7: warning: variable 'ch' set but not used [-Wunused-but-set-variable]
+  char ch;
+       ^~
+../Src/TP2_ex3_student.c:40:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [Src/subdir.mk:24: Src/TP2_ex3_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+17:34:05 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex3_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex3_student.d" -MT"Src/TP2_ex3_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex3_student.o"
+../Src/TP2_ex3_student.c: In function 'main':
+../Src/TP2_ex3_student.c:18:6: warning: unused variable 'success' [-Wunused-variable]
+  int success = count_e_asm(string1);
+      ^~~~~~~
+../Src/TP2_ex3_student.c: In function 'count_e':
+../Src/TP2_ex3_student.c:31:7: warning: variable 'ch' set but not used [-Wunused-but-set-variable]
+  char ch;
+       ^~
+../Src/TP2_ex3_student.c:40:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    860	     44	   1572	   2476	    9ac	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.bin
+Finished building: TP2.list
+ 
+ 
+17:34:06 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    860	     44	   1572	   2476	    9ac	TP2.elf
+Finished building: default.size.stdout
+ 
+17:34:13 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    860	     44	   1572	   2476	    9ac	TP2.elf
+Finished building: default.size.stdout
+ 
+17:34:48 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    860	     44	   1572	   2476	    9ac	TP2.elf
+Finished building: default.size.stdout
+ 
+17:35:37 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex3_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex3_student.d" -MT"Src/TP2_ex3_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex3_student.o"
+../Src/TP2_ex3_student.c: In function 'main':
+../Src/TP2_ex3_student.c:18:6: warning: unused variable 'success' [-Wunused-variable]
+  int success = count_e_asm(string1);
+      ^~~~~~~
+../Src/TP2_ex3_student.c: In function 'count_e':
+../Src/TP2_ex3_student.c:31:7: warning: variable 'ch' set but not used [-Wunused-but-set-variable]
+  char ch;
+       ^~
+../Src/TP2_ex3_student.c:40:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    860	     44	   1572	   2476	    9ac	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.bin
+Finished building: TP2.list
+ 
+ 
+17:35:46 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    860	     44	   1572	   2476	    9ac	TP2.elf
+Finished building: default.size.stdout
+ 
+17:56:24 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex3_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex3_student.d" -MT"Src/TP2_ex3_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex3_student.o"
+../Src/TP2_ex3_student.c: In function 'main':
+../Src/TP2_ex3_student.c:18:6: warning: unused variable 'success' [-Wunused-variable]
+  int success = count_e_asm(string1);
+      ^~~~~~~
+../Src/TP2_ex3_student.c: In function 'count_e':
+../Src/TP2_ex3_student.c:31:7: warning: variable 'ch' set but not used [-Wunused-but-set-variable]
+  char ch;
+       ^~
+../Src/TP2_ex3_student.c:40:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+C:\Users\racim\AppData\Local\Temp\ccKkscFU.s: Assembler messages:
+C:\Users\racim\AppData\Local\Temp\ccKkscFU.s:194: Error: garbage following instruction -- `ldr r3,=nb_e_cLDR r3,[r3]'
+C:\Users\racim\AppData\Local\Temp\ccKkscFU.s:199: Error: garbage following instruction -- `ldr r4,=tailleLDR r4,[r4]'
+make: *** [Src/subdir.mk:24: Src/TP2_ex3_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+17:57:02 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex3_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex3_student.d" -MT"Src/TP2_ex3_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex3_student.o"
+../Src/TP2_ex3_student.c: In function 'main':
+../Src/TP2_ex3_student.c:18:6: warning: unused variable 'success' [-Wunused-variable]
+  int success = count_e_asm(string1);
+      ^~~~~~~
+../Src/TP2_ex3_student.c: In function 'count_e':
+../Src/TP2_ex3_student.c:31:7: warning: variable 'ch' set but not used [-Wunused-but-set-variable]
+  char ch;
+       ^~
+../Src/TP2_ex3_student.c:40:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    924	     44	   1572	   2540	    9ec	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.list
+Finished building: TP2.bin
+ 
+ 
+17:57:09 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    924	     44	   1572	   2540	    9ec	TP2.elf
+Finished building: default.size.stdout
+ 
+17:57:35 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex3_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex3_student.d" -MT"Src/TP2_ex3_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex3_student.o"
+../Src/TP2_ex3_student.c: In function 'main':
+../Src/TP2_ex3_student.c:18:6: warning: unused variable 'success' [-Wunused-variable]
+  int success = count_e_asm(string1);
+      ^~~~~~~
+../Src/TP2_ex3_student.c: In function 'count_e':
+../Src/TP2_ex3_student.c:31:7: warning: variable 'ch' set but not used [-Wunused-but-set-variable]
+  char ch;
+       ^~
+../Src/TP2_ex3_student.c:40:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    820	     44	   1572	   2436	    984	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.bin
+Finished building: TP2.list
+ 
+ 
+17:57:43 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    820	     44	   1572	   2436	    984	TP2.elf
+Finished building: default.size.stdout
+ 
+17:59:22 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    820	     44	   1572	   2436	    984	TP2.elf
+Finished building: default.size.stdout
+ 
+18:04:19 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    820	     44	   1572	   2436	    984	TP2.elf
+Finished building: default.size.stdout
+ 
+18:04:57 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex3_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex3_student.d" -MT"Src/TP2_ex3_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex3_student.o"
+../Src/TP2_ex3_student.c: In function 'count_e':
+../Src/TP2_ex3_student.c:31:7: warning: variable 'ch' set but not used [-Wunused-but-set-variable]
+  char ch;
+       ^~
+../Src/TP2_ex3_student.c:40:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    844	     44	   1572	   2460	    99c	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.bin
+Finished building: TP2.list
+ 
+ 
+18:05:03 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    844	     44	   1572	   2460	    99c	TP2.elf
+Finished building: default.size.stdout
+ 
+18:06:16 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex3_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex3_student.d" -MT"Src/TP2_ex3_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex3_student.o"
+../Src/TP2_ex3_student.c: In function 'count_e':
+../Src/TP2_ex3_student.c:30:7: warning: variable 'ch' set but not used [-Wunused-but-set-variable]
+  char ch;
+       ^~
+../Src/TP2_ex3_student.c:39:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    848	     44	   1572	   2464	    9a0	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.list
+Finished building: TP2.bin
+ 
+ 
+18:06:24 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    848	     44	   1572	   2464	    9a0	TP2.elf
+Finished building: default.size.stdout
+ 
+18:07:01 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    848	     44	   1572	   2464	    9a0	TP2.elf
+Finished building: default.size.stdout
+ 
+18:14:15 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex3_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex3_student.d" -MT"Src/TP2_ex3_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex3_student.o"
+../Src/TP2_ex3_student.c: In function 'main':
+../Src/TP2_ex3_student.c:16:6: warning: unused variable 'success' [-Wunused-variable]
+  int success = count_e_asm(string1);
+      ^~~~~~~
+../Src/TP2_ex3_student.c: In function 'count_e':
+../Src/TP2_ex3_student.c:26:7: warning: variable 'ch' set but not used [-Wunused-but-set-variable]
+  char ch;
+       ^~
+../Src/TP2_ex3_student.c:35:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    820	     44	   1572	   2436	    984	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.bin
+Finished building: TP2.list
+ 
+ 
+18:14:24 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    820	     44	   1572	   2436	    984	TP2.elf
+Finished building: default.size.stdout
+ 
+18:21:45 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex3_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex3_student.d" -MT"Src/TP2_ex3_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex3_student.o"
+../Src/TP2_ex3_student.c: In function 'main':
+../Src/TP2_ex3_student.c:16:6: warning: unused variable 'success' [-Wunused-variable]
+  int success = count_e_asm(string1);
+      ^~~~~~~
+../Src/TP2_ex3_student.c: In function 'count_e':
+../Src/TP2_ex3_student.c:26:7: warning: variable 'ch' set but not used [-Wunused-but-set-variable]
+  char ch;
+       ^~
+../Src/TP2_ex3_student.c:35:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    824	     44	   1572	   2440	    988	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.list
+Finished building: TP2.bin
+ 
+ 
+18:21:51 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    824	     44	   1572	   2440	    988	TP2.elf
+Finished building: default.size.stdout
+ 
+18:22:29 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex3_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex3_student.d" -MT"Src/TP2_ex3_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex3_student.o"
+../Src/TP2_ex3_student.c: In function 'main':
+../Src/TP2_ex3_student.c:16:6: warning: unused variable 'success' [-Wunused-variable]
+  int success = count_e_asm(string1);
+      ^~~~~~~
+../Src/TP2_ex3_student.c: In function 'count_e':
+../Src/TP2_ex3_student.c:26:7: warning: variable 'ch' set but not used [-Wunused-but-set-variable]
+  char ch;
+       ^~
+../Src/TP2_ex3_student.c:35:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    824	     44	   1572	   2440	    988	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.bin
+Finished building: TP2.list
+ 
+ 
+18:22:34 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    824	     44	   1572	   2440	    988	TP2.elf
+Finished building: default.size.stdout
+ 

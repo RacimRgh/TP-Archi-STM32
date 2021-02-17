@@ -47,7 +47,7 @@ void fibo_asm(){
 		"LDR r2, [r2]\n\t"
 		"LDR r3, [r3]\n\t"
 	);
-	// Stocakge des 2 premières valeurs du tableau
+	// Stockage des 2 premières valeurs du tableau
 	asm("STR r2,[r0]\n\t"
 		"STR r3,[r0,#4]\n\t");
 	// Effectuer la somme de fibonacci
