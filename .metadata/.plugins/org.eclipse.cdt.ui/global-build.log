@@ -234,3 +234,320 @@ arm-none-eabi-size   TP2.elf
     844	      8	   1608	   2460	    99c	TP2.elf
 Finished building: default.size.stdout
  
+16:35:48 **** Clean-only build of configuration Debug for project TP2 ****
+make -j16 clean 
+rm -rf *
+ 
+16:35:48 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/TP2_ex2_1_student.c: In function 'main':
+../Src/TP2_ex2_1_student.c:14:6: warning: unused variable 'res' [-Wunused-variable]
+  int res = fibo(0,1);
+      ^~~
+C:\Users\racim\AppData\Local\Temp\ccdXtfzn.s: Assembler messages:
+C:\Users\racim\AppData\Local\Temp\ccdXtfzn.s:173: Error: undefined symbol x used as an immediate value
+C:\Users\racim\AppData\Local\Temp\ccdXtfzn.s:174: Error: undefined symbol y used as an immediate value
+make: *** [Src/subdir.mk:24: Src/TP2_ex2_1_student.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:36:21 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+C:\Users\racim\AppData\Local\Temp\ccZtDQsp.s: Assembler messages:
+C:\Users\racim\AppData\Local\Temp\ccZtDQsp.s:166: Error: undefined symbol x used as an immediate value
+C:\Users\racim\AppData\Local\Temp\ccZtDQsp.s:167: Error: undefined symbol y used as an immediate value
+make: *** [Src/subdir.mk:24: Src/TP2_ex2_1_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:36:35 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+C:\Users\racim\AppData\Local\Temp\ccF49A8X.s: Assembler messages:
+C:\Users\racim\AppData\Local\Temp\ccF49A8X.s:166: Error: bad expression -- `mov R0,=x'
+C:\Users\racim\AppData\Local\Temp\ccF49A8X.s:167: Error: bad expression -- `mov R1,=y'
+make: *** [Src/subdir.mk:24: Src/TP2_ex2_1_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:36:42 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+C:\Users\racim\AppData\Local\Temp\ccGHeyiX.s: Assembler messages:
+C:\Users\racim\AppData\Local\Temp\ccGHeyiX.s:166: Error: undefined symbol x used as an immediate value
+C:\Users\racim\AppData\Local\Temp\ccGHeyiX.s:167: Error: undefined symbol y used as an immediate value
+make: *** [Src/subdir.mk:24: Src/TP2_ex2_1_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:39:27 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+../Src/TP2_ex2_1_student.c: In function 'fibo_asm':
+../Src/TP2_ex2_1_student.c:41:6: warning: unused variable 'res' [-Wunused-variable]
+  int res = 0;
+      ^~~
+C:\Users\racim\AppData\Local\Temp\ccLZqwL8.s: Assembler messages:
+C:\Users\racim\AppData\Local\Temp\ccLZqwL8.s:169: Error: undefined symbol res used as an immediate value
+C:\Users\racim\AppData\Local\Temp\ccLZqwL8.s:170: Error: undefined symbol res used as an immediate value
+make: *** [Src/subdir.mk:24: Src/TP2_ex2_1_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:39:38 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+../Src/TP2_ex2_1_student.c: In function 'fibo_asm':
+../Src/TP2_ex2_1_student.c:41:6: warning: unused variable 'res' [-Wunused-variable]
+  int res = 0;
+      ^~~
+C:\Users\racim\AppData\Local\Temp\cc0duOvV.s: Assembler messages:
+C:\Users\racim\AppData\Local\Temp\cc0duOvV.s:169: Error: undefined symbol x used as an immediate value
+C:\Users\racim\AppData\Local\Temp\cc0duOvV.s:170: Error: undefined symbol y used as an immediate value
+make: *** [Src/subdir.mk:24: Src/TP2_ex2_1_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:40:14 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+../Src/TP2_ex2_1_student.c: In function 'fibo_asm':
+../Src/TP2_ex2_1_student.c:42:6: warning: unused variable 'res' [-Wunused-variable]
+  int res = 0;
+      ^~~
+C:\Users\racim\AppData\Local\Temp\ccmTXFtH.s: Assembler messages:
+C:\Users\racim\AppData\Local\Temp\ccmTXFtH.s:171: Error: undefined symbol y used as an immediate value
+make: *** [Src/subdir.mk:24: Src/TP2_ex2_1_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:41:23 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-size   TP2.elf 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+   text	   data	    bss	    dec	    hex	filename
+    760	     12	   1572	   2344	    928	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.list
+ 
+Finished building: TP2.bin
+ 
+16:41:30 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    760	     12	   1572	   2344	    928	TP2.elf
+Finished building: default.size.stdout
+ 
+16:42:13 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    760	     12	   1572	   2344	    928	TP2.elf
+Finished building: default.size.stdout
+ 
+16:42:33 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    760	     12	   1572	   2344	    928	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.list
+Finished building: TP2.bin
+ 
+ 
+16:42:43 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    760	     12	   1572	   2344	    928	TP2.elf
+Finished building: default.size.stdout
+ 
+16:43:27 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+C:\Users\racim\AppData\Local\Temp\ccNkdGIj.s: Assembler messages:
+C:\Users\racim\AppData\Local\Temp\ccNkdGIj.s:189: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+C:\Users\racim\AppData\Local\Temp\ccNkdGIj.s:190: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+make: *** [Src/subdir.mk:24: Src/TP2_ex2_1_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:43:36 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+C:\Users\racim\AppData\Local\Temp\ccqwGCxh.s: Assembler messages:
+C:\Users\racim\AppData\Local\Temp\ccqwGCxh.s:189: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+C:\Users\racim\AppData\Local\Temp\ccqwGCxh.s:190: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+make: *** [Src/subdir.mk:24: Src/TP2_ex2_1_student.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:43:46 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    768	     12	   1572	   2352	    930	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.list
+Finished building: TP2.bin
+ 
+ 
+16:44:08 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Src/TP2_ex2_1_student.o: In function `fibo_asm':
+TP2_ex2_1_student.c:(.text.fibo_asm+0x20): undefined reference to `x'
+TP2_ex2_1_student.c:(.text.fibo_asm+0x24): undefined reference to `y'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:57: TP2.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:44:32 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    768	     16	   1568	   2352	    930	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.list
+Finished building: TP2.bin
+ 
+ 
+16:44:43 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    768	     16	   1568	   2352	    930	TP2.elf
+Finished building: default.size.stdout
+ 
+16:45:31 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    776	     16	   1568	   2360	    938	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.list
+Finished building: TP2.bin
+ 
+ 
+16:45:40 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    776	     16	   1568	   2360	    938	TP2.elf
+Finished building: default.size.stdout
+ 
+16:54:27 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    800	     16	   1608	   2424	    978	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.list
+Finished building: TP2.bin
+ 
+ 
+16:54:33 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    800	     16	   1608	   2424	    978	TP2.elf
+Finished building: default.size.stdout
+ 
+16:57:01 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    800	     12	   1612	   2424	    978	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.list
+Finished building: TP2.bin
+ 
+ 
+16:57:08 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    800	     12	   1612	   2424	    978	TP2.elf
+Finished building: default.size.stdout
+ 
+17:03:16 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Src/TP2_ex2_1_student.o: In function `loop':
+TP2_ex2_1_student.c:(.text.fibo_asm+0x40): undefined reference to `x'
+TP2_ex2_1_student.c:(.text.fibo_asm+0x44): undefined reference to `y'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:57: TP2.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+17:07:38 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    800	     12	   1612	   2424	    978	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.bin
+Finished building: TP2.list
+ 
+ 
+17:08:06 **** Incremental Build of configuration Debug for project TP2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/TP2_ex2_1_student.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/TP2_ex2_1_student.d" -MT"Src/TP2_ex2_1_student.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/TP2_ex2_1_student.o"
+arm-none-eabi-gcc -o "TP2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\racim\STM32CubeIDE\workspace_1.5.1\TP-Archi-STM32\TP2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2.elf
+ 
+arm-none-eabi-objdump -h -S  TP2.elf  > "TP2.list"
+arm-none-eabi-objcopy  -O binary  TP2.elf  "TP2.bin"
+arm-none-eabi-size   TP2.elf 
+   text	   data	    bss	    dec	    hex	filename
+    792	     12	   1612	   2416	    970	TP2.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2.list
+Finished building: TP2.bin
+ 
+ 
