@@ -226,3 +226,6 @@ java.net.UnknownHostException: download.eclipse.org
 
 !ENTRY org.eclipse.cdt.dsf 4 10005 2021-02-17 17:32:40.706
 !MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.DsfTerminateCommand$3$1@2de062a8): Status OK: unknown code=0 OK null' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-02-17 19:15:53.250
+!MESSAGE Indexed 'TP3' (21 sources, 80 headers) in 2.69 sec: 4,484 declarations; 21,609 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0077%)
