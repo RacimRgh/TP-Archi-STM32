@@ -27,6 +27,7 @@ void Init_Led1(void);
 void Led1_On(void);
 void Led1_Off(void);
 
+// Numéro du pin du LED2
 #define LED_PIN 5
 
 
@@ -57,41 +58,40 @@ int main(void)
 
 }
 
+
 void Init_Led1(void){
 	/* A COMPLETER */
 	//activate clock for GPIOA
-//	RCC->AHB1ENR |= RCC->AHBENR_GPIOAEN;
 	RCC->AHB1ENR |= 1;
 	//Set GPIOA pin 5 output mode selection
-//	GPIOA->MODER |= 0x100000;
+	/*
+	Etant donnée la structure des registres MODER, OTYPER, OSPEEDR, PUPDR;
+	il faut faire un décalage de NUM_PIN*2 pour arriver aux bits qui lui correspondent.
+	Dans notre cas: MODER5[1,0]
+	*/
+	// Décalage de LED_PIN*2 de la valeur 01
 	GPIOA->MODER  |=  (0x1 << (LED_PIN*2));
 	//Set GPIOA pin 5 type
-//	GPIOA->OTYPER &= 0x033333;
 	GPIOA->OTYPER &= (1 << LED_PIN);
 	//Set GPIOA pin 5 speed
-//	GPIOA->OSPEEDR |= 0x300000;
-	GPIOA->OSPEEDR |= (0x3 << (LED_PIN*2));;
+	GPIOA->OSPEEDR |= (0x3 << (LED_PIN*2));
 	//Set GPIOA pin 5 pull-up/pull-down
-//	GPIOA->PUPDR |= 0x200000;
-	GPIOA->PUPDR |= (0x3 << (LED_PIN*2));;;
+	GPIOA->PUPDR |= (0x3 << (LED_PIN*2));
 }
 
 void Led1_On(void){
 	/* A COMPLETER */
 	// Activate LED by setting GPIO_BSRR_BS_5 flag n°5 of BSSR register (GPIOA5-> LD1)
-//	GPIOA->BSRR |= 0x100000;
+	// Le bit LED_PIN==5 corresponds au bit set du PIN 5 (1 = set, 0 = rien)
     GPIOA->BSRR = (1 << LED_PIN);
-//    GPIOA->ODR |= (1 << LED_PIN);
-	
 }
 
 
 void Led1_Off(void){
 	/* A COMPLETER */
 	// Deactivate LED by resetting (GPIO_BSRR_BR_5) flag n°5 of BSSR register (GPIOA5-> LD1)
-//	GPIOA->BSRR &= 0x011111;
+	// Le bit LED_PIN==21 corresponds au bit reset du PIN 5 (1 = reset, 0 = rien)
 	GPIOA->BSRR = (1 << 21);
-//	GPIOA->ODR &= (0 << LED_PIN);
 }
 
 
