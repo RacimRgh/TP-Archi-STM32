@@ -1,0 +1,10 @@
+18:26:03 **** Incremental Build of configuration Debug for project TP3 ****
+make -j16 all 
+arm-none-eabi-size   TP3.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6204	     20	   1572	   7796	   1e74	TP3.elf
+Finished building: default.size.stdout
+ 
+
+18:26:03 Build Finished. 0 errors, 0 warnings. (took 227ms)
+
