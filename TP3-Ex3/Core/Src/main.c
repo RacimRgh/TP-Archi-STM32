@@ -46,7 +46,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+GPIO_PinState button_on_off;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -84,53 +84,19 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  /* Init GPIO A P5
-  	  Initialisation GPIOA: Pin 5
-  	  Initialisation du type de sortie: Push Pull
-  	  Initialisation pull down
-  	  Initialisation de la vitesse de commutatation de sortie (freq_very_high = range 50 MHz to 200 MHz)
-  */
-  GPIO_InitStructA5.Pin = GPIO_PIN_5;
-  GPIO_InitStructA5.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStructA5.Pull = GPIO_PULLDOWN;
-  GPIO_InitStructA5.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStructA5);
 
 
-  /* Init GPIO C P13
-    	Initialisation GPIOC: Pin 13
-    	Initialisation du type de sortie: Push Pull
-    	Initialisation pull down
-    	Initialisation de la vitesse de commutatation de sortie (freq_very_high = range 50 MHz to 200 MHz)
-  */
-    GPIO_InitStructC13.Pin = GPIO_PIN_13;
-    GPIO_InitStructC13.Mode = GPIO_MODE_INPUT;
-    GPIO_InitStructC13.Pull = GPIO_PULLUP;
-    GPIO_InitStructC13.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-    HAL_GPIO_Init(GPIOC, &GPIO_InitStructC13);
-
-    GPIO_PinState button_on_off;
-    int on_off = 0;
   /* Infinite loop */
   while (1)
   {
-	button_on_off = HAL_GPIO_ReadPin(GPIOC, 13);
-	if(!on_off)
+	if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) ==  GPIO_PIN_SET)
 	{
-		if(!button_on_off)
-		{
-			on_off = 1;
-			HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-		}
-
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
+//		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
 	}
 	else
 	{
-		if(button_on_off)
-		{
-			on_off = 0;
-			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
-		}
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
 	}
     HAL_Delay(500);
   }
