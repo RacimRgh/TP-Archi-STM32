@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="PeriodElapsedCallback"/>
+		<item key="selection" value="IRQ"/>
 		<item key="wrap" value="false"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="IRQ"/>
+			<item value="Transmit_IT"/>
+			<item value="Start_IT"/>
+			<item value="Start_It"/>
+			<item value="t"/>
+			<item value="MX_USART2_UART_Ini"/>
 			<item value="PeriodElapsedCallback"/>
 			<item value="PeriodElapsed"/>
 			<item value="Elapsed"/>
@@ -17,8 +23,6 @@
 			<item value="GPIO_InitTypeDef"/>
 			<item value="InitTypeDef"/>
 			<item value="button_pin"/>
-			<item value="cpt"/>
-			<item value="nb_e_c"/>
 		</list>
 		<list key="replacehistory">
 			<item value="nb_e_c"/>

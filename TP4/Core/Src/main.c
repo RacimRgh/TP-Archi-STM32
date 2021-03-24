@@ -23,7 +23,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "string.h"
-void send_string(UART_HandleTypeDef *huart, char str[]);
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -57,7 +56,7 @@ static void MX_USART2_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+char tx_buff[11] = "Hello CY\r\n"; // Send interrupt buffer
 /* USER CODE END 0 */
 
 /**
@@ -89,12 +88,10 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART2_UART_Init();
-
   /* USER CODE BEGIN 2 */
 
-//  send_string(&huart2, "Hello CY");
-  char *str = "Hello CY\n";
-  HAL_UART_Transmit(&huart2, (uint8_t *) str, strlen(str), 10);
+
+
 
   /* USER CODE END 2 */
 
@@ -102,6 +99,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  HAL_UART_Receive(&huart2, (uint8_t *) tx_buff, 8, 10000);
+	  HAL_UART_Transmit(&huart2, (uint8_t *) tx_buff, 11, 1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -171,7 +170,7 @@ static void MX_USART2_UART_Init(void)
   /* USER CODE END USART2_Init 1 */
   huart2.Instance = USART2;
   huart2.Init.BaudRate = 115200;
-  huart2.Init.WordLength = UART_WORDLENGTH_8B;
+  huart2.Init.WordLength = UART_WORDLENGTH_9B;
   huart2.Init.StopBits = UART_STOPBITS_1;
   huart2.Init.Parity = UART_PARITY_NONE;
   huart2.Init.Mode = UART_MODE_TX_RX;
@@ -201,14 +200,6 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-void send_string(UART_HandleTypeDef *huart, char str[])
-{
-//	while(*str)
-//	{
-//		while(USART_GetFlagStatus(USART2, USART_FLAG_TXE) == RESET);
-	HAL_UART_Transmit(huart, (uint8_t *) str, strlen(str), 10);
-//	}
-}
 /* USER CODE END 4 */
 
 /**
